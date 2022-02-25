@@ -60,7 +60,7 @@ public class projectMain {
 			catch(Exception ex){
 				System.out.println("File not created");	
 			}
-			sc1.close();
+			
 		}
 		else if(choice=='3') {
 			System.out.println("\nEnter file name to delete a file : ");
@@ -81,7 +81,7 @@ public class projectMain {
 			catch(Exception ex){
 				System.out.println("File not deleted try again");	
 			}
-			sc1.close();
+			
 		}
 		else if(choice=='4') {
 			System.out.println("\nEnter file name to search :");
@@ -104,7 +104,7 @@ public class projectMain {
 					System.out.println(Searchfile+" file is not available");
 				}
 			}
-			sc2.close();
+			
 		}
 			else if(choice=='5') {
 				sc.close();
