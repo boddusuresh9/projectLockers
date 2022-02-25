@@ -1,0 +1,56 @@
+package projectP1;
+import java.io.File;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.io.IOException;
+
+public class projectMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String Path="c:\\Lockers";
+		System.out.println("Company           : Lockers pvt Ltd");
+		System.out.println("Developer details : Boddu Suresh");
+		System.out.println("                    Simplilearn student");
+		System.out.println("\n\nChoose an option :");
+		System.out.println("***********************");
+		System.out.println("1.Display all files");
+		System.out.println("2.Add file to  folder");
+		File f=new File(Path);
+		f.mkdir();
+		char choice='0';
+		System.out.println("\nEnter choice :");
+		choice=sc.next().charAt(0);
+		if(choice=='1') {
+		HashSet<String> HS=new HashSet<String>();
+		String filesList[]=f.list();
+		if(filesList.length==0) {
+			System.out.println("\nNo files to display");
+		}
+		else {
+		for(int i=0;i<filesList.length;i++) {
+			HS.add(filesList[i]);
+		}
+		}
+		}
+		else if(choice=='2') {
+			System.out.println("\nEnter file name to create a file : ");
+			Scanner sc1=new Scanner(System.in);
+			String newName=sc1.nextLine();
+			Path=Path+newName;
+			System.out.println("apple");
+			File f1=new File(Path);
+			try {
+				if(f1.createNewFile()) {
+					System.out.println("apppp");
+				}
+			}
+				catch(Exception ex){
+					System.out.println("apple");	
+				}
+		}
+				
+	}
+
+}

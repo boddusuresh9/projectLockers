@@ -1,0 +1,63 @@
+package projectP1;
+
+import java.io.File;
+
+public class file {
+	class Node{
+		String str;
+		Node next;
+		
+		public Node(String str1) {
+			this.str = str1;
+			this.next = null;
+		}
+	}
+    String Path="c\\Lockers"; 
+	private Node head = null;
+	private Node tail = null;
+	
+	public void addFile(String data) {
+		Node newNode = new Node(data);
+		Node current=head;
+		Node temp;
+		if(head == null) {
+			head = newNode;
+			tail = newNode;
+		}else {
+			while(current != null) {
+				if(current.str.compareTo(data)==0){
+					System.out.println("file alredy existing");
+				}
+				else if(current.str.compareTo(data)>0) {
+					temp=current.next;
+					newNode.next=temp;
+					current.next=newNode;
+				}
+				else if(current.str.compareTo(data)<0) {
+					temp=current;
+					newNode.next=current;
+					head=newNode;
+				}
+				else {
+					current=current.next;
+				}
+			}
+		}
+				    
+		}
+	public void displayList() {
+		Node current = head;
+		if(head == null) {
+			System.out.println("No files to display");
+			return;
+		}
+		while(current != null) {
+			System.out.println(current.str + " ");
+			current = current.next;
+		}
+		System.out.println();
+	}
+
+	
+	
+}

@@ -1,0 +1,23 @@
+package projectP1;
+import java.io.File;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.io.IOException;
+
+public class projectMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String Path="c:\\Lockers";
+		System.out.println("Company           : Lockers pvt Ltd");
+		System.out.println("Developer details : Boddu Suresh");
+		System.out.println("                    Simplilearn student");
+		File f=new File(Path);
+		f.mkdir();
+		HashSet<String> HS=new HashSet<String>();
+		File filesList[]=Path.listFiles();
+				
+	}
+
+}

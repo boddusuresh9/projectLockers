@@ -1,0 +1,13 @@
+package projectP1;
+
+public class projectMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Company           : Lockers pvt Ltd");
+		System.out.println("Developer details : Boddu Suresh");
+		System.out.println("                    Simplilearn student");
+
+	}
+
+}

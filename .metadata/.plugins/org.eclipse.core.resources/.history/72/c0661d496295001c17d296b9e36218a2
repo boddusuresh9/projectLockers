@@ -1,0 +1,20 @@
+package projectP1;
+
+import java.util.Scanner;
+
+public class projectMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String Path;
+		System.out.println("Company           : Lockers pvt Ltd");
+		System.out.println("Developer details : Boddu Suresh");
+		System.out.println("                    Simplilearn student");
+		System.out.println("\n\n Enter path :");
+		Path=sc.next();
+		System.out.println(Path);
+		
+	}
+
+}

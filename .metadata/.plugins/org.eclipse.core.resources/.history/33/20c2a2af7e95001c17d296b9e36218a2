@@ -1,0 +1,60 @@
+package projectP1;
+
+import java.io.File;
+
+public class file {
+	class Node{
+		String str;
+		Node next;
+		
+		public Node(String str1) {
+			this.str = str1;
+			this.next = null;
+		}
+	}
+    String Path="c\\Lockers"; 
+	private  Node head = null;
+	private  Node tail = null;
+	
+	public void addFile(String data)
+    {
+ 
+        // Create a new node
+        Node newNode = new Node(data);
+ 
+        // Checks if the list is empty
+        if (head == null) {
+ 
+            // If list is empty, both head and tail will
+            // point to new node
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+ 
+            // newNode will be added after tail such that
+            // tail's next will point to newNode
+            tail.next = newNode;
+         // newNode will become new tail of the list
+            tail = newNode;
+        }
+        System.out.println(head+"File added");
+    }
+				   
+	public void displayList() {
+		Node current = head;
+		System.out.println(head+"  add");
+		if(current == null) {
+			System.out.println("No files to display");
+			return;
+		}
+		while(current != null) {
+			System.out.println(current.str + " ");
+			current = current.next;
+		}
+		System.out.println();
+	}
+
+	
+	
+}
